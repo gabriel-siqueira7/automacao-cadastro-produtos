@@ -24,10 +24,8 @@ pyautogui.press("enter")
 time.sleep(5)
 
 
-# =========================================================================
-# Passo 2: Fazer login (Método Híbrido Confiável)
-# =========================================================================
-# 1. Dá um clique na tela para ativar a janela do navegador e resetar o foco com F5
+# Passo 2: Fazer login
+# 1. Dá um clique na tela para ativar a janela do navegador 
 pyautogui.click(x=424, y=372)
 
 # 2. Digita o e-mail diretamente no campo focado
@@ -42,16 +40,12 @@ pyautogui.press("enter")
 time.sleep(2)
 pyautogui.press("esc")
 time.sleep(4)
-# =========================================================================
+
 # Passo 3: Importar a base de produtos pra cadastrar
-# =========================================================================
 tabela = pd.read_csv("produtos.csv")
 print(tabela)
 
-
-# =========================================================================
 # Passo 4 e 5: Cadastrar os produtos em repetição
-# =========================================================================
 for linha in tabela.index:
     # Clicar no primeiro campo (Código do produto) para iniciar o formulário
     pyautogui.click(x=433, y=264)
